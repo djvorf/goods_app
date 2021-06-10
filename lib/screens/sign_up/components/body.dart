@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/socal_card.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:goods_app/components/socal_card.dart';
+import 'package:goods_app/constants.dart';
+import 'package:goods_app/size_config.dart';
 
 import 'sign_up_form.dart';
 
@@ -18,9 +18,9 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
-                Text("Register Account", style: headingStyle),
+                Text("Регистрация аккаунта", style: headingStyle),
                 Text(
-                  "Complete your details or continue \nwith social media",
+                  "Заполните все поля или войдите через соц. сети",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
                 Text(
-                  'By continuing your confirm that you agree \nwith our Term and Condition',
+                  'Для продолжение нужно принять условия пользовательского соглашения',
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.caption,
                 )

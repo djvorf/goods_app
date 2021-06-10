@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/custom_surfix_icon.dart';
-import 'package:shop_app/components/form_error.dart';
-import 'package:shop_app/helper/keyboard.dart';
-import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
-import 'package:shop_app/screens/login_success/login_success_screen.dart';
+import 'package:goods_app/components/custom_surfix_icon.dart';
+import 'package:goods_app/components/form_error.dart';
+import 'package:goods_app/helper/keyboard.dart';
+import 'package:goods_app/screens/forgot_password/forgot_password_screen.dart';
+import 'package:goods_app/screens/login_success/login_success_screen.dart';
+import 'package:http/http.dart';
 
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
@@ -56,13 +57,13 @@ class _SignFormState extends State<SignForm> {
                   });
                 },
               ),
-              Text("Remember me"),
+              Text("Запомните меня"),
               Spacer(),
               GestureDetector(
                 onTap: () => Navigator.pushNamed(
                     context, ForgotPasswordScreen.routeName),
                 child: Text(
-                  "Forgot Password",
+                  "Забыл пароль?",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
               )
@@ -71,7 +72,7 @@ class _SignFormState extends State<SignForm> {
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
           DefaultButton(
-            text: "Continue",
+            text: "Продолжить",
             press: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
@@ -109,8 +110,8 @@ class _SignFormState extends State<SignForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
+        labelText: "Пароль",
+        hintText: "Введите ваш пароль",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -143,7 +144,7 @@ class _SignFormState extends State<SignForm> {
       },
       decoration: InputDecoration(
         labelText: "Email",
-        hintText: "Enter your email",
+        hintText: "Введите свой email",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,

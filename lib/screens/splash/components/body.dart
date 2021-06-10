@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
-import 'package:shop_app/size_config.dart';
+import 'package:goods_app/constants.dart';
+import 'package:goods_app/screens/sign_in/sign_in_screen.dart';
+import 'package:goods_app/size_config.dart';
 
 // This is the best practice
 import '../components/splash_content.dart';
@@ -16,17 +16,8 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Tokoto, Let’s shop!",
-      "image": "assets/images/splash_1.png"
-    },
-    {
-      "text":
-          "We help people conect with store \naround United State of America",
-      "image": "assets/images/splash_2.png"
-    },
-    {
-      "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/splash_3.png"
+      "text": "Добро пожаловать в приложение для грузоперевозок",
+      "image": "assets/images/splash_1.jpg"
     },
   ];
   @override
@@ -66,9 +57,9 @@ class _BodyState extends State<Body> {
                         (index) => buildDot(index: index),
                       ),
                     ),
-                    Spacer(flex: 3),
+                    Spacer(flex: 2),
                     DefaultButton(
-                      text: "Continue",
+                      text: "Продолжить",
                       press: () {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },
@@ -89,7 +80,7 @@ class _BodyState extends State<Body> {
       duration: kAnimationDuration,
       margin: EdgeInsets.only(right: 5),
       height: 6,
-      width: currentPage == index ? 20 : 6,
+      width: currentPage == index ? 35 : 6,
       decoration: BoxDecoration(
         color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(3),

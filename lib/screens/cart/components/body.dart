@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shop_app/models/Cart.dart';
+import 'package:goods_app/models/Cart.dart';
 
 import '../../../size_config.dart';
 import 'cart_card.dart';
@@ -33,12 +33,6 @@ class _BodyState extends State<Body> {
               decoration: BoxDecoration(
                 color: Color(0xFFFFE6E6),
                 borderRadius: BorderRadius.circular(15),
-              ),
-              child: Row(
-                children: [
-                  Spacer(),
-                  SvgPicture.asset("assets/icons/Trash.svg"),
-                ],
               ),
             ),
             child: CartCard(cart: demoCarts[index]),
